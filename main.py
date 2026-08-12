@@ -141,6 +141,10 @@ C. Predict Emotion Endpoint ('/predict')
 def server_ui():
     return FileResponse('static/index.html')
 
+@app.get('/favicon.ico', include_in_schema=False)
+def favicon():
+    return FileResponse('static/favicon.svg')
+
 #B. Health Check Endpoint ('/health')
 @app.get('/health', response_model=HealthResponse)
 def health_check():

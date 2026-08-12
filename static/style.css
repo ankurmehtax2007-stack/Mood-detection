@@ -102,6 +102,17 @@ textarea, button{ font-family: inherit; }
 }
 
 .brand{ display: flex; align-items: center; gap: 10px; }
+.brand-logo{
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  object-fit: fill;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+  transition: transform 300ms var(--ease-out);
+}
+.brand-logo:hover{
+  transform: scale(1.08) rotate(-3deg);
+}
 .brand-mark{
   width: 9px; height: 9px; border-radius: 50%;
   background: var(--text-faint);

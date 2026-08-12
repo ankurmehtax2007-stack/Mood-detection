@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#1f2233"/>
+      <stop offset="100%" stop-color="#0b0c10"/>
+    </radialGradient>
+
+    <!-- Vibrant Mood Wave Gradient -->
+    <linearGradient id="moodGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#17bebb"/>
+      <stop offset="35%" stop-color="#8b5fbf"/>
+      <stop offset="70%" stop-color="#e85d75"/>
+      <stop offset="100%" stop-color="#f2b705"/>
+    </linearGradient>
+
+    <!-- Outer Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Inner Mask Masking -->
+    <linearGradient id="maskFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.75"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Container Base -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)"/>
+  <rect width="504" height="504" x="4" y="4" rx="124" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="8"/>
+
+  <!-- Glowing Emotion Wave Aura -->
+  <path d="M 96,256 C 140,160 180,360 256,256 C 332,152 372,352 416,256" 
+        fill="none" stroke="url(#moodGrad)" stroke-width="36" stroke-linecap="round" filter="url(#glow)" opacity="0.6"/>
+
+  <!-- Sharp Main Emotion Wave Path -->
+  <path d="M 96,256 C 140,160 180,360 256,256 C 332,152 372,352 416,256" 
+        fill="none" stroke="url(#moodGrad)" stroke-width="28" stroke-linecap="round"/>
+
+  <!-- Minimalist Dual Emotion Spark Nodes -->
+  <circle cx="160" cy="210" r="14" fill="#17bebb"/>
+  <circle cx="352" cy="210" r="14" fill="#e85d75"/>
+
+  <!-- Smile / Curve Sentiment Line -->
+  <path d="M 200,320 Q 256,370 312,320" fill="none" stroke="#f2b705" stroke-width="20" stroke-linecap="round"/>
+</svg>
